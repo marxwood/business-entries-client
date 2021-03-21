@@ -2,7 +2,7 @@
   <div class="flex pt-2 h-full">
     <svg
       fill="none"
-      :stroke="'currentColor' || 'silver'"
+      :stroke="range.hours[0] === 'closed' ? 'silver' : 'currentColor'"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="3"
@@ -18,9 +18,9 @@
     </div>
     <div class="ml-auto">
       <div v-for="hourRange in range.hours" :key="range.from + range.to + hourRange.start">
-        {{ hourRange.start }} - {{ hourRange.end }}
+        <span v-if="hourRange === 'closed'">Closed</span>
+        <span v-else>{{ hourRange.start }} - {{ hourRange.end }}</span>
       </div>
-      <div>11:30 - 15:00</div>
     </div>
   </div>
 </template>

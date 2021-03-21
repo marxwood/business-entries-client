@@ -3,7 +3,8 @@
     <h2 class="hidden">
       Opening Hours
     </h2>
-    <div class="flex pt-2 h-full">
+    <DayRange v-for="range in ranges" :key="range.from" :range="range" />
+    <!-- <div class="flex pt-2 h-full">
       <svg
         fill="none"
         stroke="silver"
@@ -71,10 +72,23 @@
       </svg>
       <span class="title-font font-medium">Sunday</span>
       <span class="ml-auto">Closed</span>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
+import DayRange from './DayRange.vue'
+
 export default {
+  components: {
+    DayRange
+  },
+  data: () => ({
+    ranges: [
+      { from: 'monday', to: undefined, hours: ['closed'] },
+      { from: 'tuesday', to: 'thursday', hours: [{ start: '11:30', end: '15:00', type: 'OPEN' }, { start: '18:30', end: '00:00', type: 'OPEN' }] },
+      { from: 'friday', to: 'saturday', hours: [{ start: '18:00', end: '00:00', type: 'OPEN' }] },
+      { from: 'sunday', to: undefined, hours: [{ start: '11:30', end: '15:00', type: 'OPEN' }] }
+    ]
+  })
 }
 </script>
