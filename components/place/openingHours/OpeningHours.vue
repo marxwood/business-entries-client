@@ -32,7 +32,9 @@
         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
         <path d="M22 4L12 14.01l-3-3" />
       </svg>
-      <span class="title-font font-medium capitalize">tuesday - friday</span>
+      <div class="title-font font-medium capitalize">
+        tuesday - friday
+      </div>
       <div class="ml-auto">
         <div>11:30 - 15:00</div>
         <div>11:30 - 15:00</div>

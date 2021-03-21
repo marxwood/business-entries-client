@@ -1,0 +1,36 @@
+<template>
+  <div class="flex pt-2 h-full">
+    <svg
+      fill="none"
+      :stroke="'currentColor' || 'silver'"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="3"
+      class="text-green-500 w-6 h-6 flex-shrink-0 mr-4"
+      viewBox="0 0 24 24"
+    >
+      <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+      <path d="M22 4L12 14.01l-3-3" />
+    </svg>
+    <div class="title-font font-medium capitalize">
+      <span>{{ range.from }}</span>
+      <span v-if="range.to"> - {{ range.to }} </span>
+    </div>
+    <div class="ml-auto">
+      <div v-for="hourRange in range.hours" :key="range.from + range.to + hourRange.start">
+        {{ hourRange.start }} - {{ hourRange.end }}
+      </div>
+      <div>11:30 - 15:00</div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    range: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>

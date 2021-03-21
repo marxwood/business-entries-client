@@ -6,7 +6,7 @@ export default function reducer (days) {
       const group = arr.filter(d => JSON.stringify(d[Object.keys(d)[0]]) === JSON.stringify(cur[Object.keys(cur)[0]]))
 
       // Handle the group: take the first and the last item
-      const inp = { from: undefined, to: undefined, ranges: undefined }
+      const inp = { from: undefined, to: undefined, hours: undefined }
       try {
         const first = group.shift()
         inp.from = Object.keys(first)[0]
