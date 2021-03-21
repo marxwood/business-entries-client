@@ -16,7 +16,7 @@
         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
         <path d="M22 4L12 14.01l-3-3" />
       </svg>
-      <span class="title-font font-medium">Monday</span>
+      <span class="title-font font-medium capitalize">monday</span>
       <span class="ml-auto">Closed</span>
     </div>
     <div class="flex pt-2 h-full">
@@ -32,7 +32,7 @@
         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
         <path d="M22 4L12 14.01l-3-3" />
       </svg>
-      <span class="title-font font-medium flex">Tuesday - Friday</span>
+      <span class="title-font font-medium capitalize">tuesday - friday</span>
       <div class="ml-auto">
         <div>11:30 - 15:00</div>
         <div>11:30 - 15:00</div>
