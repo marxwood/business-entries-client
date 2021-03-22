@@ -1,6 +1,6 @@
 # business-entries-client
 
-A simple client app based on NuxtJS
+A simple client app based on NuxtJS and TailwindCSS
 ![Cover image of the place business entry](https://github.com/marxwood/business-entries-client/blob/master/README%20cover.png)
 
 ## Build Setup
