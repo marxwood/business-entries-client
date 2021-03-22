@@ -6,23 +6,18 @@
         Business Entries
       </h1>
       <div class="links">
-        <!-- <NuxtLink to="/place">
-          Place 1
-        </NuxtLink> -->
+        <!-- NOTE:
+        There is a Tailwind issue with map height rendering when routed directly to component,
+        so skip using <NuxtLink :to="`/places/${id}`" /> for the matter of this demo.
+        -->
         <a
-          href="/places/xyz"
+          v-for="(id, i) in places"
+          :key="id"
+          :href="`/places/${id}`"
           rel="noopener noreferrer"
-          class="button--green"
+          class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded mr-5"
         >
-          Place 1
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          Place 2
+          Place {{ i + 1 }}
         </a>
       </div>
     </div>
@@ -30,7 +25,21 @@
 </template>
 
 <script>
-export default {}
+import { placesGQL } from '@/gql/places'
+
+export default {
+  async asyncData ({ $axios }) {
+    const { data } = await $axios({
+      method: 'get',
+      params: {
+        query: placesGQL
+      }
+    })
+    return {
+      places: data.data.places
+    }
+  }
+}
 </script>
 
 <style>

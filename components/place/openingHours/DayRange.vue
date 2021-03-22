@@ -17,7 +17,11 @@
       <span v-if="range.to"> - {{ range.to }} </span>
     </div>
     <div class="ml-auto">
-      <div v-for="hourRange in range.hours" :key="range.from + range.to + hourRange.start">
+      <div
+        v-for="(hourRange, i) in range.hours"
+        :key="range.from + range.to + hourRange.start"
+        :class="i > 0 ? 'mt-2' : ''"
+      >
         <span v-if="hourRange === 'closed'">Closed</span>
         <span v-else>{{ hourRange.start }} - {{ hourRange.end }}</span>
       </div>

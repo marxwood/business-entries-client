@@ -10,7 +10,7 @@ export default function reducer (days) {
       try {
         const first = group.shift()
         inp.from = Object.keys(first)[0]
-        inp.ranges = first[Object.keys(first)[0]] || ['closed']
+        inp.hours = first[Object.keys(first)[0]] || ['closed']
 
         const last = group.pop()
         inp.to = last && Object.keys(last)[0]

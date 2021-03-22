@@ -1,6 +1,6 @@
 <template>
   <footer class="flex border-t-2 py-4 border-gray-100 mt-6">
-    <span class="title-font font-medium text-2xl text-gray-900">86%</span>
+    <span class="title-font font-medium text-2xl text-gray-900">{{ positiveRecommendation }}%</span>
     <button class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">
       Visit
     </button>
