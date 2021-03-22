@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import Map from '@/components/place/Map.vue'
-import Header from '@/components/place/Header.vue'
+import Map from '@/components/place/map/Map.vue'
+import Header from '@/components/place/header/Header.vue'
 import OpeningHours from '@/components/place/openingHours/OpeningHours.vue'
-import Footer from '@/components/place/Footer.vue'
+import Footer from '@/components/place/footer/Footer.vue'
 import placeGQL from '@/gql/place'
 
 export default {

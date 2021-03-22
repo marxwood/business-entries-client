@@ -3,10 +3,10 @@
     <span class="text-sm title-font text-gray-500 tracking-widest">
       PLACE
     </span>
-    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
+    <h1 class="text-gray-900 text-3xl title-font font-medium mb-1" data-test-name>
       {{ displayedWhat }}
     </h1>
-    <span>{{ displayedWhere }}</span>
+    <span data-test-address>{{ displayedWhere }}</span>
   </header>
 </template>
 <script>

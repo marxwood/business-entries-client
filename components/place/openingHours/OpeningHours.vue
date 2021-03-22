@@ -3,12 +3,12 @@
     <h2 class="hidden">
       Opening Hours
     </h2>
-    <DayRange v-for="range in ranges" :key="range.from" :range="range" />
+    <DayRange v-for="range in ranges" :key="range.from" :range="range" data-test-dayrange />
   </div>
 </template>
 <script>
 import reducer from './reducer'
-import DayRange from './DayRange.vue'
+import DayRange from './dayRange/DayRange.vue'
 
 export default {
   components: {

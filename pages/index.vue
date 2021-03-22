@@ -25,9 +25,13 @@
 </template>
 
 <script>
+import Logo from '@/components/logo/Logo'
 import { placesGQL } from '@/gql/places'
 
 export default {
+  components: {
+    Logo
+  },
   async asyncData ({ $axios }) {
     const { data } = await $axios({
       method: 'get',

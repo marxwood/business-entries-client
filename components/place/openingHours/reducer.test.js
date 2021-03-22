@@ -1,6 +1,6 @@
 import reducer from './reducer'
 
-const fixture = {
+export const fixture = {
   days: {
     tuesday: [{ start: '11:30', end: '15:00', type: 'OPEN' }, { start: '18:30', end: '00:00', type: 'OPEN' }],
     wednesday: [{ start: '11:30', end: '15:00', type: 'OPEN' }, { start: '18:30', end: '00:00', type: 'OPEN' }],
@@ -11,7 +11,7 @@ const fixture = {
   }
 }
 
-const expectedResult = [
+export const expectedResult = [
   { from: 'monday', to: undefined, hours: ['closed'] },
   { from: 'tuesday', to: 'thursday', hours: [{ start: '11:30', end: '15:00', type: 'OPEN' }, { start: '18:30', end: '00:00', type: 'OPEN' }] },
   { from: 'friday', to: 'saturday', hours: [{ start: '18:00', end: '00:00', type: 'OPEN' }] },
