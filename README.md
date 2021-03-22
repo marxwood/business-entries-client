@@ -1,7 +1,7 @@
 # business-entries-client
 
 A simple client app based on NuxtJS
-![Cover image of the place business entry](README cover.png)
+![Cover image of the place business entry]("README cover.png")
 
 ## Build Setup
 
