@@ -9,7 +9,7 @@
       marginheight="0"
       marginwidth="0"
       scrolling="no"
-      :src="`https://maps.google.com/maps?q=${latlong}&hl=es&z=14&output=embed`"
+      :src="`https://maps.google.com/maps?q=${latlong}&z=14&output=embed`"
       style="filter: grayscale(1) contrast(1.2) opacity(0.8);"
     />
   </div>
